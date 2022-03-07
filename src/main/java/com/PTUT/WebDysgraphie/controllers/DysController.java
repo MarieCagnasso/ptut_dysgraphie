@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 @Controller
+@RequestMapping(path = "/")
 public class DysController {
 
     private ArrayList<Point> listPoint = new ArrayList<Point>(); // Liste des points à tracer.

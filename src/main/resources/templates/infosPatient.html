@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ISIS Dysgraphie</title>
+    <link rel="stylesheet" href="/css/index.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg primary-navbar">
+    <img src="/medias/logoIFPT.png" alt="logo"/>
+    <span><a href="/">INSTITUT DE FORMATION EN PSYCHOMOTRICIT&Eacute;</a></span>
+</nav>
+
+
+<div class="container" id="infos">
+    <div class="row">
+        <!-- FORM ADD -->
+        <form class="forms-sample" th:object="${patient}" method="POST" th:action="@{save}">
+            <div class="form-group row">
+                <label for="addPatientLibelle" class="col-sm-3 col-form-label">Nom</label>
+                <div class="col-sm-9">
+                    <input th:field="*{nom}" type="text" class="form-control" id="addPatientLibelle" required>
+                </div>
+                <label for="addPatientAnonymat" class="col-sm-3 col-form-label">Nom</label>
+                <div class="col-sm-9">
+                    <input th:field="*{anonymat}" type="number" class="form-control" id="addPatientAnonymat" required>
+                </div>
+                <label for="addPatientsexe" class="col-sm-3 col-form-label">sexe</label>
+                <div class="col-sm-9">
+                    <input th:field="*{sexe}" type="number" class="form-control" id="addPatientsexe" required>
+                </div>
+                <label for="addPatientage" class="col-sm-3 col-form-label">age</label>
+                <div class="col-sm-9">
+                    <input th:field="*{age}" type="number" class="form-control" id="addPatientage" required>
+                </div>
+                <label for="addPatientclasse" class="col-sm-3 col-form-label">classe</label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="type" id="addPatientclasse">
+                        <option th:each="c: ${classes}" th:value="${classes}"></option>
+                        <option selected th:value="${c}">${c}</option>
+                    </select>
+                </div>
+                <label for="addPatientdateExamen" class="col-sm-3 col-form-label">Date</label>
+                <div class="col-sm-9">
+                    <input th:field="*{dateExamen}" type="date" class="form-control" id="addPatientdateExamen" required>
+                </div>
+                <label for="addPatientEvaluation" class="col-sm-3 col-form-label">Evaluation</label>
+                <div class="col-sm-9">
+                    <input th:field="*{evaluation}" type="number" class="form-control" id="addPatientEvaluation"
+                           required>
+                </div>
+                <label for="addPatientEvaluationAComparer" class="col-sm-3 col-form-label">Evaluation à comparer</label>
+                <div class="col-sm-9">
+                    <input th:field="*{evaluationAComparer}" type="number" class="form-control"
+                           id="addPatientEvaluationAComparer" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-gradient-primary mr-2">Envoyer</button>
+            <button type="reset" class="btn btn-light">Annuler</button>
+        </form>
+    </div>
+</div>
+
+<div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
+<div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
+<div id="tablet"><img src="/medias/graphic-tablet.png" alt="tablet"/></div>
+<img id="letter" src="/medias/letter.png" alt="letter"/>
+<img id="elephant" src="/medias/elephant.png" alt="elephant"/>
+
+
+<footer><a href="">Mentions légales</a></footer>
+</body>
+</html>
