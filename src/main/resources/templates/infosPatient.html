@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <title>ISIS Dysgraphie</title>
-    <link rel="stylesheet" href="/CSS/infoPatient.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/corps.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
             crossorigin="anonymous"></script>
@@ -18,48 +19,50 @@
 
 <div class="container" id="infos">
     <div class="row">
-        <h1>Informations sur le patient</h1>
-        <form>
-            <div class="form-group row">
+        <h1 class="m-3">Informations sur le patient</h1>
+        <form class="mt-3">
+            <div class="form-group row m-3">
                 <div class="col-md">
-                <label for="addPatientLibelle" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="addPatientLibelle" required>
+                    <label for="addPatientage" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="addPatientage" required>
+                </div>
+                <div class="col-md">
+                    <label for="addPatientLibelle" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="addPatientLibelle" required>
+                </div>
+            </div>
+            <div class="form-group row m-3">
+
+                <div class="col-md">
+                    <label for="addPatientclasse" class="form-label">Classe</label>
+                    <SELECT id="addPatientclasse" name="niveau" size="1">
+                        <option>Ton niveau scolaire</option>
+                        <option> CP</option>
+                        <option> CE1</option>
+                        <option> CE2</option>
+                        <option> CM1</option>
+                        <option> CM2</option>
+                        <option> 6EME</option>
+                        <option> 5EME</option>
+                        <option> 4EME</option>
+                        <option> 3EME</option>
+                    </SELECT>
                 </div>
                 <div class="col-md">
                     <label for="addPatientsexe" class="form-label">Sexe</label>
 
                     <SELECT id="addPatientsexe" name="sexe" size="1">
-                    <option>Ton sexe</option>
-                    <option> fille </option>
-                    <option> garçon </option>
-                </SELECT>
-            </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-md">
-                <label for="addPatientage" class="form-label">age</label>
-                    <input type="number" class="form-control" id="addPatientage" required>
-                </div>
-                <div class="col-md">
-                    <label for="addPatientclasse" class="form-label">classe</label>
-                    <SELECT id="addPatientclasse" name="niveau" size="1">
-                        <option>Ton niveau scolaire</option>
-                        <option> CP </option>
-                        <option> CE1 </option>
-                        <option> CE2 </option>
-                        <option> CM1 </option>
-                        <option> CM2 </option>
-                        <option> 6EME </option>
-                        <option> 5EME </option>
-                        <option> 4EME </option>
-                        <option> 3EME </option>
+                        <option>Ton sexe</option>
+                        <option> fille</option>
+                        <option> garçon</option>
                     </SELECT>
                 </div>
             </div>
-            <div class="form-group row">
+
+            <div class="form-group row m-3">
 
                 <div class="col-md">
-                <label for="addPatientdateExamen" class="form-label">Date</label>
+                    <label for="addPatientdateExamen" class="form-label">Date</label>
                     <input type="date" class="form-control" id="addPatientdateExamen" required>
                 </div>
                 <div class="col-md">
@@ -67,26 +70,26 @@
                     <input type="number" class="form-control" id="addPatientAnonymat" required>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row m-3">
                 <div class="col-md">
-            <label for="addPatientEvaluation" class="form-label">Evaluation</label>
+                    <label for="addPatientEvaluation" class="form-label">Evaluation</label>
                     <input type="number" class="form-control" id="addPatientEvaluation" required>
                 </div>
                 <div class="col-md">
-                <label for="addPatientEvaluationAComparer" class="form-label">Evaluation à comparer</label>
+                    <label for="addPatientEvaluationAComparer" class="form-label">Evaluation à comparer</label>
                     <input type="number" class="form-control" id="addPatientEvaluationAComparer" required>
                 </div>
 
             </div>
-            <button type="submit" class="btn btn-primary mr-2">Suivant</button>
+            <button type="submit" class="btn btn-primary m-3">Suivant</button>
         </form>
     </div>
 </div>
 
 
-<img id="elephant" src="/medias/elephant.png" alt="elephant"/>
 
 
-<footer><a href="">Mentions légales</a></footer>
+
+<footer><a href="">Mentions légales</a><img id="elephant" src="/medias/elephant.png" alt="elephant"/></footer>
 </body>
 </html>

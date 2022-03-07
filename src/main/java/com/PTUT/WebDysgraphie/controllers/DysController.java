@@ -32,14 +32,14 @@ public class DysController {
     public String init(){
         this.tempsDebut = System.currentTimeMillis();
         this.tempsPrecedent = 0;
-        return "page";
+        return "fragments/page";
     }
 
     @RequestMapping("/erase")
     public String effacer(){
         this.listPression.clear();
         this.listPoint.clear();
-        return "page";
+        return "fragments/page";
     }
 
     @RequestMapping("/write")
@@ -53,7 +53,7 @@ public class DysController {
         model.addAttribute("crayon","");
         this.listPoint.clear();
         this.listPression.clear();
-        return "page";
+        return "fragments/page";
     }
 
     @RequestMapping("/infos")
@@ -77,7 +77,7 @@ public class DysController {
 
         //rapport temps crayon en l'air/crayon sur la feuille
         model.addAttribute("crayon",excelmodel.analyzeTaTf(listvaleur,tempsE,this.tempsTotal));
-        return "page::#details";
+        return "fragments/page::#details";
     }
 
 
@@ -85,7 +85,7 @@ public class DysController {
     public String saveInfos(@RequestParam String sexe, @RequestParam String niveau){
         this.sexe = sexe;
         this.niveau = niveau;
-        return "show";
+        return "fragments/show";
     }
 
     @PostMapping("/addPoint")
@@ -96,19 +96,19 @@ public class DysController {
         Point point = new Point(pointX,pointY,this.listPoint.size(),(int)intervalle,(int)time);
         this.listPoint.add(point);
         this.tempsPrecedent = time;
-        return "page";
+        return "fragments/page";
     }
 
     @PostMapping("/addPression")
     public String addPressure(@RequestParam double pression){
         this.listPression.add(pression);
-        return "page";
+        return "fragments/page";
     }
 
     @RequestMapping("/download")
     public String download() {
         this.tableau = new Tableau("fichier-"+System.currentTimeMillis()+".csv", "sheet1", this.listPoint, this.listPression,this.sexe,this.niveau);
-        return "page";
+        return "fragments/page";
     }
 
 
