@@ -19,7 +19,7 @@ public class PatientController {
     @GetMapping("add")
     public String getAddPatient(@ModelAttribute("patient") Patient patient, Model model){
         model.addAttribute("patient",patient);
-        model.addAttribute("classes",Patient.classes.values());
+//        model.addAttribute("classes",Patient.classes.values());
         return "infosPatient";
     }
 }

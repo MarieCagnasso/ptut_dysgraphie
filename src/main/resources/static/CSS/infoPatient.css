@@ -1,0 +1,66 @@
+/*palette*/
+/*
+noir    : #202020
+rouge   : #ED1C24
+jaune1  : #F7D28D (jaune orange)
+orange1 : #E77655 (orage fonc�)
+jaune2  : #F7EF95 (jaune citron)
+orange2 : #F7C387 (orange claire)
+saumon  : #F69679
+blanc   : #F5F5F5
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;600;700&display=swap');
+@font-face{
+    font-family:'digital';
+    src: url('digital-7/digital-7.ttf');
+}
+
+
+body {
+    background-color: #f69679!important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+nav {
+    padding-left:40px;
+    background-color: #202020;
+    color: white;
+    height: 62px;
+}
+
+nav img {
+    padding-top: 10px;
+    width:60px;
+}
+
+nav span {
+    font-size:22px;
+    position: relative;
+    top:-15px;
+    font-weight: 600;
+}
+
+
+
+#elephant {
+    position: absolute;
+    right: 10%;
+    bottom: 35px;
+}
+
+footer {
+    background-color: #E77655;
+    text-align: left;
+    position: absolute;
+    height: 40px;
+    font-size: 13px;
+    width: 100%;
+    bottom: 0px;
+    line-height: 40px;
+}
+
+footer a {
+    padding-left:25px;
+}

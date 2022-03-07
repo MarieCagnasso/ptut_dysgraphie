@@ -9,23 +9,23 @@ public class Patient {
     private String sexe;
     private Integer age;
     private Date dateExamen;
-    private Integer evalution;
+    private Integer evaluation;
     private String evaluationAComparer;
     private classes classe;
 
-    public Patient(String nom, Integer anonymat, String sexe, Integer age, Date dateExamen, Integer evalution, String evaluationAComparer, classes classe) {
+    public Patient(String nom, Integer anonymat, String sexe, Integer age, Date dateExamen, Integer evaluation, String evaluationAComparer, classes classe) {
         this.nom = nom;
         this.anonymat = anonymat;
         this.sexe = sexe;
         this.age = age;
         this.dateExamen = dateExamen;
-        this.evalution = evalution;
+        this.evaluation = evaluation;
         this.evaluationAComparer = evaluationAComparer;
         this.classe = classe;
     }
 
     public enum classes{
-        CP, CE1, CE2, CM1, CM2
+        CP, CE1, CE2, CM1, CM2, EME6, EME5, EME4, EME3
 
     }
 
@@ -79,11 +79,11 @@ public class Patient {
     }
 
     public Integer getEvalution() {
-        return evalution;
+        return evaluation;
     }
 
     public void setEvalution(Integer evalution) {
-        this.evalution = evalution;
+        this.evaluation = evalution;
     }
 
     public String getEvaluationAComparer() {

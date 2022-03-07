@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <title>ISIS Dysgraphie</title>
-    <link rel="stylesheet" href="/css/index.css"/>
+    <link rel="stylesheet" href="/CSS/infoPatient.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
             crossorigin="anonymous"></script>
@@ -12,65 +13,77 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg primary-navbar">
-    <img src="/medias/logoIFPT.png" alt="logo"/>
-    <span><a href="/">INSTITUT DE FORMATION EN PSYCHOMOTRICIT&Eacute;</a></span>
-</nav>
+<div th:replace="fragments/navbar :: content"></div>
 
 
 <div class="container" id="infos">
     <div class="row">
-        <!-- FORM ADD -->
-        <form class="forms-sample" th:object="${patient}" method="POST" th:action="@{save}">
+        <h1>Informations sur le patient</h1>
+        <form>
             <div class="form-group row">
-                <label for="addPatientLibelle" class="col-sm-3 col-form-label">Nom</label>
-                <div class="col-sm-9">
-                    <input th:field="*{nom}" type="text" class="form-control" id="addPatientLibelle" required>
+                <div class="col-md">
+                <label for="addPatientLibelle" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="addPatientLibelle" required>
                 </div>
-                <label for="addPatientAnonymat" class="col-sm-3 col-form-label">Nom</label>
-                <div class="col-sm-9">
-                    <input th:field="*{anonymat}" type="number" class="form-control" id="addPatientAnonymat" required>
+                <div class="col-md">
+                    <label for="addPatientsexe" class="form-label">Sexe</label>
+
+                    <SELECT id="addPatientsexe" name="sexe" size="1">
+                    <option>Ton sexe</option>
+                    <option> fille </option>
+                    <option> garçon </option>
+                </SELECT>
+            </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+                <label for="addPatientage" class="form-label">age</label>
+                    <input type="number" class="form-control" id="addPatientage" required>
                 </div>
-                <label for="addPatientsexe" class="col-sm-3 col-form-label">sexe</label>
-                <div class="col-sm-9">
-                    <input th:field="*{sexe}" type="number" class="form-control" id="addPatientsexe" required>
-                </div>
-                <label for="addPatientage" class="col-sm-3 col-form-label">age</label>
-                <div class="col-sm-9">
-                    <input th:field="*{age}" type="number" class="form-control" id="addPatientage" required>
-                </div>
-                <label for="addPatientclasse" class="col-sm-3 col-form-label">classe</label>
-                <div class="col-sm-9">
-                    <select class="form-control" name="type" id="addPatientclasse">
-                        <option th:each="c: ${classes}" th:value="${classes}"></option>
-                        <option selected th:value="${c}">${c}</option>
-                    </select>
-                </div>
-                <label for="addPatientdateExamen" class="col-sm-3 col-form-label">Date</label>
-                <div class="col-sm-9">
-                    <input th:field="*{dateExamen}" type="date" class="form-control" id="addPatientdateExamen" required>
-                </div>
-                <label for="addPatientEvaluation" class="col-sm-3 col-form-label">Evaluation</label>
-                <div class="col-sm-9">
-                    <input th:field="*{evaluation}" type="number" class="form-control" id="addPatientEvaluation"
-                           required>
-                </div>
-                <label for="addPatientEvaluationAComparer" class="col-sm-3 col-form-label">Evaluation à comparer</label>
-                <div class="col-sm-9">
-                    <input th:field="*{evaluationAComparer}" type="number" class="form-control"
-                           id="addPatientEvaluationAComparer" required>
+                <div class="col-md">
+                    <label for="addPatientclasse" class="form-label">classe</label>
+                    <SELECT id="addPatientclasse" name="niveau" size="1">
+                        <option>Ton niveau scolaire</option>
+                        <option> CP </option>
+                        <option> CE1 </option>
+                        <option> CE2 </option>
+                        <option> CM1 </option>
+                        <option> CM2 </option>
+                        <option> 6EME </option>
+                        <option> 5EME </option>
+                        <option> 4EME </option>
+                        <option> 3EME </option>
+                    </SELECT>
                 </div>
             </div>
-            <button type="submit" class="btn btn-gradient-primary mr-2">Envoyer</button>
-            <button type="reset" class="btn btn-light">Annuler</button>
+            <div class="form-group row">
+
+                <div class="col-md">
+                <label for="addPatientdateExamen" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="addPatientdateExamen" required>
+                </div>
+                <div class="col-md">
+                    <label for="addPatientAnonymat" class="form-label">Numéro d'annonymat</label>
+                    <input type="number" class="form-control" id="addPatientAnonymat" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md">
+            <label for="addPatientEvaluation" class="form-label">Evaluation</label>
+                    <input type="number" class="form-control" id="addPatientEvaluation" required>
+                </div>
+                <div class="col-md">
+                <label for="addPatientEvaluationAComparer" class="form-label">Evaluation à comparer</label>
+                    <input type="number" class="form-control" id="addPatientEvaluationAComparer" required>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary mr-2">Suivant</button>
         </form>
     </div>
 </div>
 
-<div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
-<div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
-<div id="tablet"><img src="/medias/graphic-tablet.png" alt="tablet"/></div>
-<img id="letter" src="/medias/letter.png" alt="letter"/>
+
 <img id="elephant" src="/medias/elephant.png" alt="elephant"/>
 
 

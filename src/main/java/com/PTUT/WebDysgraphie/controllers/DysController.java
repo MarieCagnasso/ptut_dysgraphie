@@ -4,7 +4,6 @@ import com.PTUT.WebDysgraphie.models.Lecteur;
 import com.PTUT.WebDysgraphie.models.Point;
 import com.PTUT.WebDysgraphie.models.Tableau;
 import com.PTUT.WebDysgraphie.models.Trace;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
