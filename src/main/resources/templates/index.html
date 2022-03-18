@@ -17,7 +17,7 @@
             <div id="soustitre">Analysez et examinez la précision de votre écriture grâce aux tests de détection de la dysgraphie
                 <br>Quel test désirez-vous faire ?</div>
             <div id="bouton">
-                <form action="saveTestChoice">
+                <form action="/saveTestChoice" onclick="verif()">
                     <div class="choix"> 
                         <input type="radio" id="BHK" name="typetest" value="BHK" >
                         <label for="BHK">BHK</label>
@@ -31,10 +31,27 @@
                         <input type="radio" id="pangramme" name="typetest" value='pangramme'>
                         <label for="pangramme">pangramme</label>
                     </div>
-                    <button type="submit" >Continuer</button>
+                    <button type="submit" id="saveTestChoice">Continuer</button>
                 </form>
             </div>
         </div>
+
+        <script>
+            var select = false;
+            document.getElementById("saveTestChoice").disabled = true;
+            function verif() {
+                if (document.getElementById("BHK").checked==true || document.getElementById("BHKADO").checked==true || document.getElementById("pangramme").checked==true ) {
+                    select = true;
+                } 
+                if (select == true) {
+                    document.getElementById("saveTestChoice").disabled = false;
+                } else {
+                    document.getElementById("saveInfos").disabled = true;
+                }
+            }
+
+
+        </script>
 
         <div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
         <div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>

@@ -91,7 +91,17 @@ public class DysController {
     public String saveInfos(@RequestParam String sexe, @RequestParam String niveau){
         this.sexe = sexe;
         this.niveau = niveau;
-        return "fragments/show";
+        if(this.monEvalution.getTypetest()==typeTest.BHK){
+            return "consignesBHK";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.BHKADO){
+            return "consignesBHKADO";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.pangramme){
+            return "consignesPangramme";
+        }
+        return null;
+        //return "fragments/show";
     }
 
     @PostMapping("/addPoint")
@@ -126,6 +136,7 @@ public class DysController {
     @RequestMapping("/saveMaterielChoice")
     public String saveMaterielChoice(@RequestParam typeMateriel typemateriel){
         this.monEvalution.setTypemateriel(typemateriel);
+        
         return "autorisation";
     }
 

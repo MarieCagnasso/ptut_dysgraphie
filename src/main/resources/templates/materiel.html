@@ -14,7 +14,7 @@
 
         <div class='text'>
             <div class="titre"> Quel matériel utilisez-vous ? </div>
-            <form action="saveMaterielChoice">
+            <form action="saveMaterielChoice" onclick="verif()">
                 <div class="choix"> 
                     <input type="radio" id="graphique" name="typemateriel" value="graphique" >
                     <label for="graphique">Tablettre graphique WACOM</label>
@@ -29,9 +29,26 @@
                     <label for="tablette">Tablette,Ipad ou autres</label>
                 </div>  
                 <div class="attention"> Attention : l'écriture au doigt ne donnera pas de résultats exploitables </div>
-                <button type="submit" >Continuer</button>
+                <button type="submit" id="saveMaterielChoice" >Continuer</button>
             </form>
         </div>
+
+        <script>
+            var select = false;
+            document.getElementById("saveMaterielChoice").disabled = true;
+            function verif() {
+                if (document.getElementById("graphique").checked == true || document.getElementById("tactile").checked == true || document.getElementById("tablette").checked == true) {
+                    select = true;
+                }
+                if (select == true) {
+                    document.getElementById("saveMaterielChoice").disabled = false;
+                } else {
+                    document.getElementById("saveMaterielChoice").disabled = true;
+                }
+            }
+
+
+        </script>
 
         <div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
         <div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
