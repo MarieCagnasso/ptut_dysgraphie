@@ -116,14 +116,17 @@ public class DysController {
         this.tableau = new Tableau("fichier-"+System.currentTimeMillis()+".csv", "sheet1", this.listPoint, this.listPression,this.sexe,this.niveau);
         return "fragments/page";
     }
-    
-    //@RequestMapping("/materiel")
-    //public String materiel(){ return "materiel"; }
-    
+        
     @RequestMapping("/saveTestChoice")
-    public String saveTestChoice(@RequestParam typeTest groupe1){
-        this.monEvalution.setTypetest(groupe1);
+    public String saveTestChoice(@RequestParam typeTest typetest){
+        this.monEvalution.setTypetest(typetest);
         return "materiel";
+    }
+    
+    @RequestMapping("/saveMaterielChoice")
+    public String saveMaterielChoice(@RequestParam typeMateriel typemateriel){
+        this.monEvalution.setTypemateriel(typemateriel);
+        return "autorisation";
     }
 
 
