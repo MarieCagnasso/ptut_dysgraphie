@@ -22,8 +22,9 @@ blanc   : #F5F5F5
 body {
     margin:0;
     background-color: #f69679;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Alegreya CS', sans-serif;
     overflow:hidden;
+    text-align: center;
 }
 
 body a {
@@ -34,17 +35,24 @@ body a {
 .text {
     color:white;
     position: absolute;
-    top:15%;
-    right:20%;
+    margin-left:20px;
+    margin-right:20px;
 }
 
 .titre{
     font-size: 60px;
-    color: blue;
+    text-align: center;
+    position: static;
 }
 
-.choix{
-    font-size:26px;
+.soustitre{
+    font-size:25px;
+    text-align: center;
+}
+
+.form{
+    font-size:20px;
+    text-align: center;
 }
 
 .bouton{
@@ -55,18 +63,17 @@ body a {
     border-radius: 10px;
     text-align: center;
     line-height: 35px;
-    margin-top: 50px;
-    margin-left: 60%;
-}
-
-.boutonlabel{
     font-size: 20px;
+    color : white;
 }
 
-.bouton :hover {
+.bouton:hover {
     background-color: #FF555C;
     cursor:pointer;
 }
+
+
+
 
 #writing, #tablet, #chrono {
     position: absolute;
@@ -112,3 +119,19 @@ body a {
     right: 10%;
     bottom: 35px;
 }
+
+select{
+    font-family: 'Open Sans Condensed';
+    font-size:18px;
+    margin-top: 45px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 40%;
+}
+
+select:hover{
+    cursor: pointer;
+}
+
+
