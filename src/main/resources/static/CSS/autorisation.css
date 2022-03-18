@@ -1,0 +1,41 @@
+/*palette*/
+/*
+noir    : #202020
+rouge   : #ED1C24
+jaune1  : #F7D28D (jaune orange)
+orange1 : #E77655 (orage fonc�)
+jaune2  : #F7EF95 (jaune citron)
+orange2 : #F7C387 (orange claire)
+saumon  : #F69679
+blanc   : #F5F5F5
+ */
+
+body {
+    background-color: #f69679!important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.center{
+    text-align: center;
+    position: absolute;
+}
+
+#elephant {
+    position: absolute;
+    right: 2%;
+    bottom: 35px;
+    width: 10%;
+}
+
+footer {
+    background-color: #E77655;
+    position: fixed;
+    font-size: 13px;
+    width: 100%;
+    bottom: 0px;
+    line-height: 40px;
+}
+
+footer a {
+    padding-left:25px;
+}
