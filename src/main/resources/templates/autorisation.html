@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>ISIS Dysgraphie</title>
+    <link rel="stylesheet" href="/CSS/autorisation.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+   
+    <form action="/saveInfos" onclick="verif()">
+<div class="container" id="autorisation">
+    <div class="text-center">
+        <h1 class="m-3" >Formulaire de consentement</h1>
+        <div > Merci de lire ce formulaire de consentement avant de continuer ... </div><br>
+            <div style="overflow:scroll; border:#000000 1px solid; width: 1250px; height: 350px;">
+                <br>
+L’Institut de Formation en Psychomotricité (Université Toulouse 3) souhaite évaluer les caractéristiques cinématiques de la trace d’écriture pour jeunes enfants destinée aux professionnels. Cet outil vise à évaluer les données cinématiques de la trace produite durant un exercice d’écriture que l’on mettra en correspondance avec les valeurs obtenues par une population de référence de la classe de l’enfant. L’édition d’un nouveau test nécessite, en amont, un recueil de données sur un échantillon représentatif de la population française, afin de pouvoir construire des normes qui serviront ensuite de référence. 
+<br></br>
+La passation de cette évaluation se fait par le recueil de la trace produite lorsque les sujets écrivent sur une tablette digitalisante.
+<br></br>
+Toutes les informations concernant votre enfant seront traitées de façon confidentielle et anonyme. Seules ses initiales apparaîtront sur le protocole et les données feront uniquement l’objet d’un traitement statistique collectif, aucun autre renseignement ne sera dévoilé qui puisse révéler son identité. Toutes les données seront gardées dans un endroit sécurisé et seuls le responsable scientifique et les chercheurs adjoints y auront accès. Vous êtes libre d’accepter que votre enfant participe ou non à cette recherche et, si vous acceptez, vous êtes libre de l’en retirer à tout moment sans aucune conséquence et sans avoir à vous justifier. Vous pouvez poser des questions au sujet de la recherche en tout temps en communiquant avec le responsable scientifique du projet par courrier électronique (régis.soppelsa@univ-tlse3.fr).
+<br></br>
+<b>Diffusion</b>
+<br>
+Cette recherche pourra être diffusée dans des colloques ou publiée dans des actes de colloque et des articles de revue académique.
+<br></br>
+<b>Participation à la recherche</b><br>
+Si vous acceptez que votre enfant participe à cette recherche, veuillez compléter les informations ci-après et remettre ce formulaire signé au praticien qui lui administre le test. 
+ </div>
+</div>
+        <div class="choix">
+            <obligatoire/>
+        <input type="radio" id="accept" name="groupe1" value='acceptation'>
+        <label for="accept">J’accepte que les données enregistrées à l’occasion de cette recherche puissent faire l’objet d’un traitement informatisé. 
+            J’ai bien noté que le droit d’accès prévu par la loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés (art. 39) s’exerce à tout moment auprès du praticien qui administre le test de cette recherche à mon enfant et qui connaît son identité. 
+            Je pourrai exercer mon droit de rectification et d’opposition auprès de ce praticien.</label>
+    </div>
+        <div class="bouton"><a href="/infosPatient">Continuer</a></div>
+    </form>
+</div>
+
+   
+
+
+<footer><a href="">Mentions légales</a><img id="elephant" src="/medias/elephant.png" alt="elephant"/></footer>
+</body>
+</html>
