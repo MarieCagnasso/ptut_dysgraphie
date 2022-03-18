@@ -110,6 +110,9 @@ public class DysController {
         this.tableau = new Tableau("fichier-"+System.currentTimeMillis()+".csv", "sheet1", this.listPoint, this.listPression,this.sexe,this.niveau);
         return "fragments/page";
     }
+    
+    @RequestMapping("/materiel")
+    public String materiel(){ return "materiel"; }
 
 
 }

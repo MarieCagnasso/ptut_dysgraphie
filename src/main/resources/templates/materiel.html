@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>ISIS Dysgraphie</title>
+    <link rel="stylesheet" href="/css/corps.css"/>
+    <link rel="stylesheet" href="/css/materiel.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+<div th:replace="fragments/navbar :: content"></div>
+    
+    <div class='text'>
+    <div class="titre"> Quel matériel utilisez-vous ? </div>
+    <div class="choix"> 
+        <input type="radio" id="graphique" name="groupe1" value="graphique" >
+        <label for="graphique">Tablettre graphique WACOM</label>
+    </div>
+    <div class="choix">
+        <input type="radio" id="tactile" name="groupe1" value='tactile'>
+        <label for="tactile">Ecran tactile</label>
+    </div>
+    <div class="choix">
+        <input type="radio" id="tablette" name="groupe1" value='tablette'>
+        <label for="tablette">Tablette,Ipad ou autres</label>
+    </div>
+    <div class="attention"> Attention : l'écriture au doigt ne donnera pas de résultats exploitables </div>
+    <div class="bouton"><a href="/autorisation">Continuer</a></div>
+    </div>
+
+
+<div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
+<div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
+<div id="tablet"><img src="/medias/graphic-tablet.png" alt="tablet"/></div>
+<img id="letter" src="/medias/letter.png" alt="letter"/>
+<img id="elephant" src="/medias/elephant.png" alt="elephant"/>
+<footer> <a href="">Mentions légales</a></footer>
+</body>
+</html>
