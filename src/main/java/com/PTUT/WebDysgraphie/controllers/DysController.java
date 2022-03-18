@@ -1,6 +1,10 @@
 package com.PTUT.WebDysgraphie.controllers;
 
+import com.PTUT.WebDysgraphie.models.Evaluation;
+import com.PTUT.WebDysgraphie.models.Evaluation.typeMateriel;
+import com.PTUT.WebDysgraphie.models.Evaluation.typeTest;
 import com.PTUT.WebDysgraphie.models.Lecteur;
+import com.PTUT.WebDysgraphie.models.Patient;
 import com.PTUT.WebDysgraphie.models.Point;
 import com.PTUT.WebDysgraphie.models.Tableau;
 import com.PTUT.WebDysgraphie.models.Trace;
@@ -26,6 +30,8 @@ public class DysController {
     private String sexe;
     private String niveau;
     private long tempsTotal;
+    private Patient patient;
+    private Evaluation monEvalution= new Evaluation(patient,typeTest.BHK, typeMateriel.graphique);
 
 
     @RequestMapping("/init")
@@ -111,8 +117,14 @@ public class DysController {
         return "fragments/page";
     }
     
-    @RequestMapping("/materiel")
-    public String materiel(){ return "materiel"; }
+    //@RequestMapping("/materiel")
+    //public String materiel(){ return "materiel"; }
+    
+    @RequestMapping("/saveTestChoice")
+    public String saveTestChoice(@RequestParam typeTest groupe1){
+        this.monEvalution.setTypetest(groupe1);
+        return "materiel";
+    }
 
 
 }
