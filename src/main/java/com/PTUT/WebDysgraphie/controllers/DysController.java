@@ -62,8 +62,7 @@ public class DysController {
         return "fragments/page";
     }
 
-    @RequestMapping("/infos")
-    public String infos(){ return "infos"; }
+    
 
     @GetMapping("/results")
     public String result(@RequestParam long tempsE,Model model) throws IOException {
