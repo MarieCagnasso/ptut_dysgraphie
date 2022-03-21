@@ -41,10 +41,47 @@ footer a {
     height: 14px;
     line-height: 14px;
 }
+#writing, #tablet, #chrono {
+    position: absolute;
+    background-color: rgba(196,196,196,0.4);
+    padding:15px;
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#writing {
+    bottom:270px;
+    left:5%;
+}
+
+#chrono {
+    bottom:220px;
+    left:18%
+}
+
+#tablet {
+    bottom: 80px;
+    left: 28%;
+}
+
+#writing img, #chrono img {
+    width:70px;
+}
+
+#tablet img {
+    height: 58px;
+    width: 70px;
+}
 
 #letter {
-      position: absolute;
-    left: 10%;
+    position: absolute;
     bottom: 35px;
-    width: 10%;
+    left: 8%;
+}
+
+#elephant {
+    position: absolute;
+    right: 10%;
+    bottom: 35px;
 }

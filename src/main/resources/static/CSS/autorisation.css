@@ -10,9 +10,11 @@ saumon  : #F69679
 blanc   : #F5F5F5
  */
 
+ 
+
 body {
     background-color: #f69679!important;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Alegreya CS', sans-serif;
 }
 
 .center{
