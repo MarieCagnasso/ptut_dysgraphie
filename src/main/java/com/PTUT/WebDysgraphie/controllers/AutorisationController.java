@@ -18,6 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AutorisationController {
     
     @RequestMapping("/infosPatient")
-    public String materiel(){ return "infosPatient";}
+    public String infosPatient(){ return "infosPatient";}
     
 }

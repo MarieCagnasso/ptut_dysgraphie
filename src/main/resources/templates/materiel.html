@@ -12,27 +12,34 @@
     <body>
         <div th:replace="fragments/navbar :: content"></div>
 
-        <div class='text'>
-            <div class="titre"> Quel matériel utilisez-vous ? </div>
-            <div class='form'>
-            <form action="saveMaterielChoice" onclick="verif()">
-                <div class="choix"> 
-                    <input type="radio" id="graphique" name="typemateriel" value="graphique" >
-                    <label for="graphique">Tablettre graphique WACOM</label>
-                </div>
+        <div class="container">
+            <div class="text-center">
+                <h2 class="m-3">Quel matériel utilisez-vous ? </h2>
+                <div class='form'>
+                    <form action="saveMaterielChoice" onclick="verif()">
+                        <div class="choix"> 
+                            <input type="radio" id="graphique" name="typemateriel" value="graphique" class="form-check-input" >
+                            <label for="graphique" class="form-check-label">Tablettre graphique WACOM</label>
+                        </div>
+                        <br>
+                        <div class="choix">
+                            <input type="radio" id="tactile" name="typemateriel" value='tactile' class="form-check-input">
+                            <label for="tactile" class="form-check-label">Ecran tactile</label>
+                        </div>
+                        <br>
+                        <div class="choix">
+                            <input type="radio" id="tablette" name="typemateriel" value='tablette' class="form-check-input">
+                            <label for="tablette" class="form-check-label">Tablette,Ipad ou autres</label>
+                        </div>  
+                        <br>
+                        
+                        <div id="panneau" class="attention"><img src="/medias/panneau.png" alt="panneau"/>Attention : l'écriture au doigt ne donnera pas de résultats exploitables </div>
+                        <br>
+                        <button type="submit" id="saveMaterielChoice" class="btn btn-danger" >Continuer</button>
 
-                <div class="choix">
-                    <input type="radio" id="tactile" name="typemateriel" value='tactile'>
-                    <label for="tactile">Ecran tactile</label>
+                    </form>
                 </div>
-                <div class="choix">
-                    <input type="radio" id="tablette" name="typemateriel" value='tablette'>
-                    <label for="tablette">Tablette,Ipad ou autres</label>
-                </div>  
-                <div class="attention"> Attention : l'écriture au doigt ne donnera pas de résultats exploitables </div>
-                <button type="submit" id="saveMaterielChoice" class='bouton' >Continuer</button>
             </div>
-            </form>
         </div>
 
         <script>

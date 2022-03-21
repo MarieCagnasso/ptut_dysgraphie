@@ -19,6 +19,7 @@ blanc   : #F5F5F5
 }
 
 
+
 body {
     margin:0;
     background-color: #f69679;
@@ -72,6 +73,12 @@ body a {
     cursor:pointer;
 }
 
+.choix {
+    font-size : 20px;
+    font-style:  italic;
+    
+    
+}
 
 
 
