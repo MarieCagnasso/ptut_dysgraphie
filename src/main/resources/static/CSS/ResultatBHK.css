@@ -1,0 +1,109 @@
+/*palette*/
+/*
+noir    : #202020
+rouge   : #ED1C24
+jaune1  : #F7D28D (jaune orange)
+orange1 : #E77655 (orage fonc�)
+jaune2  : #F7EF95 (jaune citron)
+orange2 : #F7C387 (orange claire)
+saumon  : #F69679
+blanc   : #F5F5F5
+ */
+
+body {
+    background-color: #f69679!important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+#elephant {
+    position: absolute;
+    right: 10%;
+    bottom: 35px;
+    width: 10%;
+}
+
+footer {
+    background-color: #E77655;
+    position: fixed;
+    font-size: 13px;
+    width: 100%;
+    bottom: 0px;
+    line-height: 40px;
+}
+
+footer a {
+    padding-left:25px;
+}
+#addVitesse {
+    padding: 1px;
+    font-size: 19px;
+    height: 14px;
+    line-height: 14px;
+}
+#writing, #tablet, #chrono {
+    position: absolute;
+    background-color: rgba(196,196,196,0.4);
+    padding:15px;
+    width:70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#writing {
+    bottom:270px;
+    left:5%;
+}
+
+#chrono {
+    bottom:220px;
+    left:18%
+}
+
+#tablet {
+    bottom: 80px;
+    left: 28%;
+}
+
+#writing img, #chrono img {
+    width:70px;
+}
+
+#tablet img {
+    height: 58px;
+    width: 70px;
+}
+
+#letter {
+    position: absolute;
+    bottom: 35px;
+    left: 8%;
+}
+
+.case{
+    color: gray;
+}
+
+.row{
+    position:absolute;
+}
+
+#gras{
+    text-align: right;
+}
+
+#vide{
+    border-top: 0px; 
+    border-left: 0px;
+    background-color: #f69679;
+   border:none;
+}
+
+.text{
+    font-size : 25px;
+}
+
+.decal{
+    border-top: 0px; 
+    border-left: 0px;
+}

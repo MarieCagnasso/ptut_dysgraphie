@@ -1,6 +1,10 @@
 package com.PTUT.WebDysgraphie.controllers;
 
+import com.PTUT.WebDysgraphie.models.Evaluation;
+import com.PTUT.WebDysgraphie.models.Evaluation.typeMateriel;
+import com.PTUT.WebDysgraphie.models.Evaluation.typeTest;
 import com.PTUT.WebDysgraphie.models.Lecteur;
+import com.PTUT.WebDysgraphie.models.Patient;
 import com.PTUT.WebDysgraphie.models.Point;
 import com.PTUT.WebDysgraphie.models.Tableau;
 import com.PTUT.WebDysgraphie.models.Trace;
@@ -26,6 +30,8 @@ public class DysController {
     private String sexe;
     private String niveau;
     private long tempsTotal;
+    private Patient patient;
+    private Evaluation monEvalution= new Evaluation(patient,typeTest.BHK, typeMateriel.graphique);
 
 
     @RequestMapping("/init")
@@ -56,8 +62,7 @@ public class DysController {
         return "fragments/page";
     }
 
-    @RequestMapping("/infos")
-    public String infos(){ return "infos"; }
+    
 
     @GetMapping("/results")
     public String result(@RequestParam long tempsE,Model model) throws IOException {
@@ -81,12 +86,13 @@ public class DysController {
     }
 
 
-    @RequestMapping("/saveInfos")
+    /*@RequestMapping("/saveInfos")
     public String saveInfos(@RequestParam String sexe, @RequestParam String niveau){
         this.sexe = sexe;
         this.niveau = niveau;
         return "fragments/show";
     }
+*/
 
     @PostMapping("/addPoint")
     public String add(@RequestParam int pointX, @RequestParam int pointY) {
@@ -110,6 +116,36 @@ public class DysController {
        // this.tableau = new Tableau("fichier-"+System.currentTimeMillis()+".csv", this.listPoint, this.listPression,this.sexe,this.niveau);
         return "fragments/page";
     }
+        
+    @RequestMapping("/saveTestChoice")
+    public String saveTestChoice(@RequestParam typeTest typetest){
+        this.monEvalution.setTypetest(typetest);
+        return "materiel";
+    }
+    
+    @RequestMapping("/saveMaterielChoice")
+    public String saveMaterielChoice(@RequestParam typeMateriel typemateriel){
+        this.monEvalution.setTypemateriel(typemateriel);
+        
+        return "autorisation";
+    }
+    
+    @RequestMapping("/saveInfosPatient")
+    public String saveInfosPatient(){
+        if(this.monEvalution.getTypetest()==typeTest.BHK){
+            return "consignesBHK";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.BHKADO){
+            return "consignesBHKADO";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.pangramme){
+            return "consignesPangramme";
+        }
+        return null;
+        
+    }
+    
+    
 
 
 }

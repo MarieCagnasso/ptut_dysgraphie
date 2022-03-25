@@ -19,50 +19,22 @@ blanc   : #F5F5F5
 }
 
 
-body {
-    margin:0;
-    background-color: #f69679;
-    font-family: 'Open Sans', sans-serif;
-    overflow:hidden;
+#titre{
+    font-size : 60px;
 }
 
-body a {
-    color:white;
-    text-decoration: none;
+#soustitre{
+    font-size:25px;
 }
 
-.text {
-    color:white;
-    position: absolute;
-    top:15%;
-    right:20%;
-}
-
-.titre{
-    font-size: 60px;
-}
-
-.soustitre{
-    font-size:26px;
-}
-
-.bouton{
-    background-color:#ED1C24;
-    font-family: 'Open Sans Condensed', sans-serif;
-    height: 35px;
-    width: 200px;
-    border-radius: 10px;
+.form{
+    font-size:20px;
     text-align: center;
-    line-height: 35px;
-    margin-top: 50px;
-    margin-left: 60%;
-    font-size: 20px
 }
 
-
-.bouton :hover {
-    background-color: #FF555C;
-    cursor:pointer;
+.choix {
+    font-size : 20px;
+    font-style:  italic;
 }
 
 #writing, #tablet, #chrono {
@@ -110,17 +82,5 @@ body a {
     bottom: 35px;
 }
 
-select{
-    font-family: 'Open Sans Condensed';
-    font-size:18px;
-    margin-top: 45px;
-    background: none;
-    border: none;
-    border-bottom: 1px solid black;
-    width: 40%;
-}
 
-select:hover{
-    cursor: pointer;
-}
 

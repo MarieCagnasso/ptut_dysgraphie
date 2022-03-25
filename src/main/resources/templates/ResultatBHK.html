@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>ISIS Dysgraphie</title>
+        <link rel="stylesheet" href="/CSS/ResultatBHK.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div th:replace="fragments/navbar :: content"></div>
+
+        <div class="container" id="resBHK">
+            <div class="text-center">
+                <h1 class="m-3">Résultats</h1>
+                <form class="text-center">
+                    <div class="form-group row m-3">
+                        <label for="addVitesse" class="text">Vitesse : </label>
+                        <br>
+                        <br>
+                        <br>
+                        <div class="decal">
+                        <div class="col-md">
+                            <label for="addScore" class="text">Score</label>
+                            <input type="text" class="form-control"  id="addScore" required>
+                        </div> <div class="col-md">
+                            <label for="addScore" class="text">Moyenne</label>
+                            <input type="text" class="form-control" id="addScore" required>
+                        </div>
+                            </div>
+                        </div>
+                </form>
+                    </div>
+            <style type="text/css">
+.tftable {margin-left:45%;margin-right:15%; margin-top:1%;font-size:12px;color:#333333;border-width: 1px;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#d4e3e5;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;}
+.tftable tr:hover {background-color:#ffffff;}
+
+</style>
+
+<table style="width:800px; height:100px;" class="tftable" >
+<tr><th>Critères</th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th>Total</th></tr>
+<tr><td>1. Ecriture grande</td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td ></td></tr>
+<tr><td>2. Inclinaison de la marge vers la droite </td ><td id="vide" ></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td ></td></tr>
+<tr><td id="gras"><b>Phrases </b></td><td><b>1</b></td><td><b>2</b></td><td><b>3</b></td><td><b>4</b></td><td><b>5</b></td><td class="case"></td></tr>
+<tr><td>3. Lignes non planes </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4. Mots serrés</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5. Ecriture chaotique </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6. Liens interrompus entre les lettres </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>7. Télescopages </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8. Variation dans la grandeur des lettres troncs </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>9. Hauteur relative incorrecte </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10. Distorsion des lettres </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>11. Formes de lettres ambiguës</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>12. Lettres retouchées </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>13. Hésitations et tremblements </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+</table>
+
+
+            </div>
+          <div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
+        <div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
+        <div id="tablet"><img src="/medias/graphic-tablet.png" alt="tablet"/></div>
+        <img id="letter" src="/medias/letter.png" alt="letter"/>
+
+        <footer> <a href="">Mentions légales</a></footer>
+    </body>
+</html>

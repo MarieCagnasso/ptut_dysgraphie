@@ -11,7 +11,7 @@
 	<groupId>com.PTUT</groupId>
 	<artifactId>WebDysgraphie</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>WebDysgraphie</name>
+	<name>WebDysgraphie2</name>
 	<description>Projet PTUT dysgraphie</description>
 	<properties>
 		<java.version>1.8</java.version>
