@@ -8,6 +8,9 @@ public class Point implements Comparable {
     private int inter;
     private int tps;
 
+    public Point() {
+    }
+
     public Point(int x, int y, int num, int inter, int tps){
         this.x = x;
         this.y = y;
@@ -47,17 +50,7 @@ public class Point implements Comparable {
         return inter;
     }
 
-    public int getInterval(){
-        return inter;
-    }
 
-    public int getTime() {
-        return tps;
-    }
-
-    public int getNum() {
-        return num;
-    }
 
     @Override
     public int compareTo(Object o) {
@@ -70,16 +63,46 @@ public class Point implements Comparable {
         return "N°"+num+"\tx:"+x+"\ty:"+y+"\tinter:"+inter;
     }
 
-    public int getX(){
-	return this.x;
+    public int getX() {
+        return x;
     }
 
-    public int getY(){
-	return this.y;
+    public int getY() {
+        return y;
     }
 
-    public void setInter(int inter){
+    public int getNum() {
+        return num;
+    }
+
+    public int getInter() {
+        return inter;
+    }
+
+    public int getTps() {
+        return tps;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    public void setInter(int inter) {
         this.inter = inter;
     }
+
+    public void setTps(int tps) {
+        this.tps = tps;
+    }
+
+
 
 }

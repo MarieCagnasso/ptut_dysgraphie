@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="default">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>ISIS Dysgraphie</title>
+    <link rel="stylesheet" href="/css/corps.css" />
+    <link rel="stylesheet" href="/CSS/bhktexte.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://rawgit.com/stuyam/pressure/master/dist/pressure.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div th:replace="fragments/navbar :: content"></div>
+
+
+    <div layout:fragment="content">
+        <div id="texteAEcrire">
+            <div class="paragraph">
+                <span> Il fait très beau</span>
+                <span> Je suis bien</span>
+                <span> Je vois de l'eau</span>
+                <span> mais je ne sais pas</span>
+                <span> ou elle va</span>
+            </div>
+            <div class="paragraph">
+                <span> L'eau venait sur les côtés, avec une grande</span>
+                <span> force. Des enfants étaient près de moi. Le plus petit,</span>
+                <span> donnait ses affaires à une femme.</span>
+            </div>
+            <div class="paragraph">
+                <span> Cette femme, qui étéit grande et belle, devait être une amie. Elle</span>
+                <span>lui avait pris la main, et les voyais aller vers une place :</span>
+                <span>la plus belle de notre ville ! Un des enfants, donnait des choses à</span>
+                <span>un autre; mais, je ne savais pas ce que c'était.</span>
+            </div>
+        </div>
+        <div class="voile">
+            <img id="load" src="/medias/loading.png" alt="load" />
+        </div>
+        <div class="modal-body">
+            <img src="/medias/gomme.png" id="button_clear" alt="effacer" />
+            <canvas id="canvas_draw" style="display:block"> </canvas>
+            <div id="capture_canvas"></div>
+        </div>
+        <div id="btn-valid" class="btn-valid">Valider</div>
+        <div id="restart">
+            <a href="/write"><img src="/medias/refresh.png" alt="restart" />&nbsp;Recommencer</a>
+        </div>
+
+        <img id="pingouin" src="/medias/penguin.png" alt="pingouin" />
+        <span id="time">
+            <text id="minutes">00</text>:<text id="seconds">00</text>
+        </span>
+
+        <div id="details">
+            <ul>
+                <li onclick="deroule(this);">
+                    <div>Distance<img src="/medias/down-arrow.png" /></div>
+                    <div id="vitesse" th:utext="${distance}"> </div>
+                </li>
+                <li onclick="deroule(this);">
+                    <div>Pression<img src="/medias/down-arrow.png" /></div>
+                    <div id="pression" th:utext="${pression}"> </div>
+                </li>
+                <li onclick="deroule(this);">
+                    <div>Acceleration<img src="/medias/down-arrow.png" /></div>
+                    <div id="acceleration" th:utext="${acceleration}"> </div>
+                </li>
+                <li onclick="deroule(this);">
+                    <div>Crayon<img src="/medias/down-arrow.png" /></div>
+                    <div id="crayon" th:utext="${crayon}"> </div>
+                </li>
+            </ul>
+        </div>
+        <script src="JS/bhktexte.js"></script>
+    </div>
+
+
+    <footer> <a href="">Mentions légales</a></footer>
+    
+
+</body>
+
+</html>

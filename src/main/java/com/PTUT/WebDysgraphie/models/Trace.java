@@ -46,7 +46,7 @@ public class Trace {
     public double getAverageInter() {
         double res = 0;
         for (Point p : myPoints) {
-            res += p.getInterval();
+            res += p.getInter();
         }
         res = res / myPoints.size();
         return res;
