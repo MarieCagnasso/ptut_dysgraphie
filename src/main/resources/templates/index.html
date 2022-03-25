@@ -20,18 +20,19 @@
 
         <div class="container">
             <div class="text-center">
-                <h1 class="m-3" > Évaluez votre écriture !</h1>
-                <h2 class="m-3">Analysez et examinez la précision de votre écriture grâce aux tests de détection de la dysgraphie
-                    <br>Quel test désirez-vous faire ?</h2>
+                <h1 class="m-3" id="titre"> Évaluez votre écriture !</h1>
+                <h2 class="m-3" id="soustitre">Analysez et examinez la précision de votre écriture grâce aux tests de détection de la dysgraphie</h2>
+                <br>
+                <h2 class="m-3" >Quel test désirez-vous faire ?</h2>
                 <form action="/saveTestChoice" onclick="verif()">
                     <div class="choix">
-                    <input type="radio" id="BHK" name="typetest" value="BHK"  class="form-check-input">
-                    <label for="BHK" class="form-check-label" >BHK</label>
+                        <input type="radio" id="BHK" name="typetest" value="BHK"  class="form-check-input">
+                        <label for="BHK" class="form-check-label" >BHK</label>
                     </div>
                     <br>
                     <div class="choix">
-                    <input type="radio" id="BHKADO" name="typetest" value='BHKADO'  class="form-check-input">
-                    <label for="BHKADO" class="form-check-label">BHK ADO</label>
+                        <input type="radio" id="BHKADO" name="typetest" value='BHKADO'  class="form-check-input">
+                        <label for="BHKADO" class="form-check-label">BHK ADO</label>
                     </div>
                     <br>
                     <div class="choix" >
