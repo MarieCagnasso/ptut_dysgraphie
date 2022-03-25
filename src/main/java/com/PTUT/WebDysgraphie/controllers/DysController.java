@@ -86,22 +86,13 @@ public class DysController {
     }
 
 
-    @RequestMapping("/saveInfos")
+    /*@RequestMapping("/saveInfos")
     public String saveInfos(@RequestParam String sexe, @RequestParam String niveau){
         this.sexe = sexe;
         this.niveau = niveau;
-        if(this.monEvalution.getTypetest()==typeTest.BHK){
-            return "consignesBHK";
-        }
-        if(this.monEvalution.getTypetest()==typeTest.BHKADO){
-            return "consignesBHKADO";
-        }
-        if(this.monEvalution.getTypetest()==typeTest.pangramme){
-            return "consignesPangramme";
-        }
-        return null;
-        //return "fragments/show";
+        return "fragments/show";
     }
+*/
 
     @PostMapping("/addPoint")
     public String add(@RequestParam int pointX, @RequestParam int pointY) {
@@ -138,6 +129,23 @@ public class DysController {
         
         return "autorisation";
     }
+    
+    @RequestMapping("/saveInfosPatient")
+    public String saveInfosPatient(){
+        if(this.monEvalution.getTypetest()==typeTest.BHK){
+            return "consignesBHK";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.BHKADO){
+            return "consignesBHKADO";
+        }
+        if(this.monEvalution.getTypetest()==typeTest.pangramme){
+            return "consignesPangramme";
+        }
+        return null;
+        
+    }
+    
+    
 
 
 }
