@@ -80,8 +80,21 @@ footer a {
     left: 8%;
 }
 
-#elephant {
-    position: absolute;
-    right: 10%;
-    bottom: 35px;
+.case{
+    color: gray;
+}
+
+.row{
+    position:absolute;
+}
+
+#gras{
+    text-align: right;
+}
+
+#vide{
+    border-top: 0px; 
+    border-left: 0px;
+    background-color: #f69679;
+   border:none;
 }
