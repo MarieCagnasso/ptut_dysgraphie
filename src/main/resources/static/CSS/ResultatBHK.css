@@ -98,3 +98,12 @@ footer a {
     background-color: #f69679;
    border:none;
 }
+
+.text{
+    font-size : 25px;
+}
+
+.decal{
+    border-top: 0px; 
+    border-left: 0px;
+}
