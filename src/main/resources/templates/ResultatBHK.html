@@ -17,9 +17,9 @@
         <div th:replace="fragments/navbar :: content"></div>
 
         <div class="container" id="resBHK">
-            <div class="row">
+            <div class="text-center">
                 <h1 class="m-3">Résultats</h1>
-                <form class="mt-3">
+                <form class="text-center">
                     <div class="form-group row m-3">
                         <label for="addVitesse" class="form-label">Vitesse : </label>
                         <div class="col-auto">
@@ -30,13 +30,43 @@
                             <input type="text" class="form-control" id="addScore" required>
                         </div>
                         </div>
+                </form>
                     </div>
+            <style type="text/css">
+.tftable {margin-left:45%;margin-right:15%; margin-top:1%;font-size:12px;color:#333333;border-width: 1px;border-collapse: collapse;}
+.tftable th {font-size:12px;background-color:#acc8cc;border-width: 1px;padding: 8px;border-style: solid;border-color: #729ea5;text-align:left;}
+.tftable tr {background-color:#d4e3e5;}
+.tftable td {font-size:12px;border-width: 1px;padding: 8px;border-style: solid;}
+.tftable tr:hover {background-color:#ffffff;}
+
+</style>
+
+<table style="width:800px; height:100px;" class="tftable" >
+<tr><th>Critères</th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th id="vide"></th><th>Total</th></tr>
+<tr><td>1. Ecriture grande</td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td ></td></tr>
+<tr><td>2. Inclinaison de la marge vers la droite </td ><td id="vide" ></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td id="vide"></td><td ></td></tr>
+<tr><td id="gras"><b>Phrases </b></td><td><b>1</b></td><td><b>2</b></td><td><b>3</b></td><td><b>4</b></td><td><b>5</b></td><td class="case"></td></tr>
+<tr><td>3. Lignes non planes </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4. Mots serrés</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5. Ecriture chaotique </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6. Liens interrompus entre les lettres </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>7. Télescopages </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8. Variation dans la grandeur des lettres troncs </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>9. Hauteur relative incorrecte </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10. Distorsion des lettres </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>11. Formes de lettres ambiguës</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>12. Lettres retouchées </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>13. Hésitations et tramblements </td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+</table>
+
+
             </div>
           <div id="writing"><img src="/medias/hand-writing.png" alt="writing"/></div>
         <div id="chrono"><img src="/medias/chrono.png" alt="chronometer"/></div>
         <div id="tablet"><img src="/medias/graphic-tablet.png" alt="tablet"/></div>
         <img id="letter" src="/medias/letter.png" alt="letter"/>
-        <img id="elephant" src="/medias/elephant.png" alt="elephant"/>
+
         <footer> <a href="">Mentions légales</a></footer>
     </body>
 </html>
